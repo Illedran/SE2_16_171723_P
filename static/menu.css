@@ -1,0 +1,36 @@
+.pasto-thumbnail {
+    width: 100%;
+}
+
+.thumb {
+    cursor: pointer; cursor: hand;
+}
+
+.glyphicon-ok:hover { color: limegreen; }
+
+.panel {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+
+}
+
+.panel:hover {
+    border-color: darkgray;
+}
+
+.pdg {
+    border-color: goldenrod;
+}
+
+.pdg:hover {
+    border-color: darkgoldenrod;
+}
+
+.selected:hover {
+    color: green;
+}
+.selected {
+    color: green;
+}

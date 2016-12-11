@@ -1,0 +1,26 @@
+{
+  "name": "se2_16_171723_l4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Illedran/SE2_16_171723_L4.git"
+  },
+  "author": "Illedran",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Illedran/SE2_16_171723_L4/issues"
+  },
+  "homepage": "https://github.com/Illedran/SE2_16_171723_L4#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "consolidate": "^0.14.5",
+    "express": "^4.14.0",
+    "express-session": "^1.14.2",
+    "mustache": "^2.3.0"
+  }
+}

@@ -1,0 +1,189 @@
+{
+  "primi": [
+    {
+      "id": 1,
+      "nome": "Pasta al carciofo",
+      "KCal": 350,
+      "vegetarian": true,
+      "info": "La pasta ai carciofi è un piatto tipico dell'autunno e dell'inverno, quando i carciofi sono nel pieno del loro sapore e si trovano da acquistare freschi. E' ottima anche in tarda primavera, quando si trovano gli ultimi carciofi, particolarmente grandi e poco costosi.",
+      "pdg": true
+    },
+    {
+      "id": 5,
+      "nome": "Pasta zucchine e gamberi",
+      "KCal": 430,
+      "vegetarian": false,
+      "info": "La pasta con gamberi e zucchine è un classico estivo: un piatto leggero, elegante e allo stesso tempo gustoso; ricorda i colori dell'estate.",
+      "pdg": true
+    },/*
+    {
+      "id": 2,
+      "nome": "Pasta in bianco",
+      "KCal": 340,
+      "vegetarian": true,
+      "info": ""
+    },*/
+    {
+      "id": 3,
+      "nome": "Pastina in brodo",
+      "KCal": 280,
+      "vegetarian": true,
+      "info": "Un piatto che ci ricorda della nostra infanzia."
+    },
+    {
+      "id": 4,
+      "nome": "Passato di verdura",
+      "KCal": 200,
+      "vegetarian": true,
+      "info": "Il passato di verdure è un comfort food tipicamente invernale, quando è forte il desiderio di coccolarci con una pietanza calda, avvolgente e genuina che ci riscaldi con gusto."
+    },
+    {
+      "id": 6,
+      "nome": "Pasta aglio olio e peperoncino",
+      "KCal": 380,
+      "vegetarian": true,
+      "info": "Gli spaghetti aglio e olio sono un piatto tipico della cucina napoletana, facente parte della schiera di ricette cosiddette della cucina piccina partenopea. Con \"aglio e olio\" si indica un condimento estremamente semplice per insaporire la pasta, che vede sostanzialmente una rivisitazione in chiave povera degli spaghetti alle vongole.Il piatto un tempo era conosciuto anche come \"vermicelli alla Borbonica\"."
+    }
+  ],
+  "secondi": [
+    {
+      "id": 7,
+      "nome": "Frittata al formaggio",
+      "KCal": 300,
+      "vegetarian": true,
+      "info": "Un piatto leggero e filante, una base perfetta da farcire con fantasia, a seconda del vostro gusto.",
+      "pdg": true
+    },
+    {
+      "id": 8,
+      "nome": "Vitello lesso",
+      "KCal": 250,
+      "vegetarian": false,
+      "info": "I tagli migliori per ottenere un buon bollito sono il fusello, il cappello del prete, il bianco costato, il brione, il reale, ma anche la noce o il codone (che provengono dalla parte posteriore del manzo) sono buoni tagli.",
+      "pdg": true
+    },
+    {
+      "id": 9,
+      "nome": "Formaggio",
+      "KCal": 300,
+      "vegetarian": true,
+      "info": ""
+    },
+    {
+      "id": 10,
+      "nome": "Affettato",
+      "KCal": 350,
+      "vegetarian": false,
+      "info": ""
+    },/*
+    {
+      "id": 11,
+      "nome": "Carne tritata",
+      "KCal": 340,
+      "vegetarian": false,
+      "info": ""
+    },
+    {
+      "id": 12,
+      "nome": "Carne omogeneizzata",
+      "KCal": 340,
+      "vegetarian": false,
+      "info": ""
+    },*/
+    {
+      "id": 13,
+      "nome": "Tomino",
+      "KCal": 320,
+      "vegetarian": true,
+      "info": "Il tomino, localmente detto \"tumin\" cioè piccolo formaggio, è un formaggio piemontese prodotto con latte misto: vaccino-caprino, vaccino-ovino o ovino-caprino. Il tomino ha umili origini, appartiene alla famiglia delle cacioricotte e la sua lavorazione risale all'Ottocento quando veniva prodotto dalle donne seguendo un metodo molto semplice."
+    },/*
+    {
+      "id": 14,
+      "nome": "Manzo lesso",
+      "KCal": 340,
+      "vegetarian": false,
+      "info": ""
+    },*/
+    {
+      "id": 15,
+      "nome": "Tonno all'olio",
+      "KCal": 340,
+      "vegetarian": false,
+      "info": ""
+    }
+  ],
+  "contorni": [
+    {
+      "id": 16,
+      "nome": "Finocchi all'olio",
+      "KCal": 140,
+      "vegetarian": true,
+      "info": "I finocchi sono ortaggi molto noti per le loro proprietà aromatiche e digestive. Sono molto utilizzati in cucina, soprattutto per la preparazione di primi piatti e di contorni sia caldi che freddi. I finocchi sono ricchi d'acqua e poveri di calorie. Presentano proprietà diuretiche e sono ricchi di flavonoidi. Sono tipici della stagione invernale."
+    },
+    {
+      "id": 17,
+      "nome": "Patate lesse",
+      "KCal": 220,
+      "vegetarian": true,
+      "info": "Le patate lesse sono un piatto antichissimo ma sempre apprezzato e gustato per la sua semplicità. Sono adatte ad ogni stagione e vengono gustate sia calde che fredde, sia da sole che con qualsiasi alimento."
+    },
+    {
+      "id": 18,
+      "nome": "Melanzane grigliate",
+      "KCal": 150,
+      "vegetarian": true,
+      "info": "Le melanzane grigliate sono un contorno di verdura facile e veloce da realizzare, perfette sia da servire come antipasto che come contorno per accompagnare le grigliate di carne e di pesce durante la stagione estiva."
+    },
+    {
+      "id": 19,
+      "nome": "Verdura fresca di stagione",
+      "KCal": 100,
+      "vegetarian": true,
+      "info": ""
+    },/*
+    {
+      "id": 20,
+      "nome": "Peperonata",
+      "KCal": 340,
+      "vegetarian": false,
+      "info": ""
+    },*/
+    {
+      "id": 21,
+      "nome": "Peperoni al forno",
+      "KCal": 110,
+      "vegetarian": true,
+      "info": "I peperoni al forno sono un semplice contorno preparato con peperoni cotti nel forno, spellati e poi conditi aglio, prezzemolo, olio e sale. I peperoni al forno sono ottimi da gustare così, ma possono essere anche la base per la preparazione di tante altre ricette o per condire la pasta. Se avanzano si conservano in frigorifero per un paio di giorni. Sono ottimi gustati freddi."
+    }/*
+    {
+      "id": 22,
+      "nome": "Patate bollite",
+      "KCal": 340,
+      "vegetarian": false,
+      "info": ""
+    },
+    {
+      "id": 23,
+      "nome": "Carote al tegame",
+      "KCal": 340,
+      "vegetarian": false,
+      "info": ""
+    }*/
+  ],
+  "dessert": [
+    {
+      "id": 24,
+      "nome": "Mousse di frutta",
+      "KCal": 80,
+      "vegetarian": true,
+      "info": "La mousse è una preparazione dolce o salata dalla consistenza spumosa e leggera, come dice la stessa parola in francese. Ne esistono molte varianti in base agli aromi e all'ingrediente di base utilizzato."
+    },
+    {
+      "id": 25,
+      "nome": "Frutta fresca di stagione",
+      "KCal": 70,
+      "vegetarian": true,
+      "info": ""
+    }
+  ]
+}

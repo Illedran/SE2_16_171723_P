@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+            <div class="page-header row">
+                <h1 class="text-center">APSP Prenotazione Pasti</h1>
+                <div class="col-sm-2">
+                    <a href="/menu"><h1 class="glyphicon thumb glyphicon-arrow-left" aria-hidden="true"></h1></a>
+                </div>
+                <div class="col-sm-8">
+                    <h2 class="text-center">{{nome}}</h2>
+                    {{#pdg}}<h4 class="text-center">Pietanza del giorno</h4>{{/pdg}}
+                </div>
+                <div class="col-sm-2">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-5">
+                    <img class="pasto-thumbnail" src="/static/img/{{ id }}.jpg">
+                </div>
+                <div class="col-sm-7">
+                    <h4>
+                        <b>Calorie:</b> {{KCal}}
+                        {{#vegetarian}}<small class="text-muted">Pietanza vegetariana</small>{{/vegetarian}}
+                    </h4>
+                    <p>{{info}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link href="/static/menu.css" rel="stylesheet">
+</body>
+</html>

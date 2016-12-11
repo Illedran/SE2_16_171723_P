@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Exercise Lab2</title>
+</head>
+
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+            <div class="page-header row">
+                <h1 class="text-center">APSP Prenotazione Pasti</h1>
+                <div class="col-sm-2">
+                    <a href="/"><h1 class="glyphicon thumb glyphicon-arrow-left" aria-hidden="true"></h1></a>
+                </div>
+                <div class="col-sm-8">
+                    <h2 class="text-center">Ordinazione Menù</h2>
+                </div>
+                <div class="col-sm-2">
+                </div>
+            </div>
+            <h3>Primi Piatti</h3>
+            {{#primi}}
+            <div class="row panel panel-default{{#pdg}} pdg{{/pdg}}">
+                <div class="col-sm-4"><img class="pasto-thumbnail" src="/static/img/{{ id }}.jpg"></div>
+                <div class="col-sm-7">
+                    <h3>
+                        <b><a href="/pasto?id={{id}}">{{nome}}</a></b>
+                        {{#pdg}}
+                        <small class="text-muted">Pietanza del giorno</small>
+                        {{/pdg}}
+                    </h3>
+                    <h4>
+                        <b>Calorie:</b> {{KCal}}
+                        {{#vegetarian}}
+                        <small class="text-muted">Pietanza vegetariana</small>
+                        {{/vegetarian}}
+                    </h4>
+                    <p>{{info}}</p>
+                </div>
+                <div class="col-sm-1">
+                    <h1 id="{{ id }}" class="glyphicon thumb primo glyphicon-ok" aria-hidden="true"></h1>
+                </div>
+            </div>
+            {{/primi}}
+            <h3>Secondi Piatti</h3>
+            {{#secondi}}
+            <div class="row panel panel-default{{#pdg}} pdg{{/pdg}}">
+                <div class="col-sm-4"><img class="pasto-thumbnail" src="/static/img/{{ id }}.jpg"></div>
+                <div class="col-sm-7">
+                    <h3>
+                        <b><a href="/pasto?id={{id}}">{{nome}}</a></b>
+                        {{#pdg}}
+                        <small class="text-muted">Pietanza del giorno</small>
+                        {{/pdg}}
+                    </h3>
+                    <h4>
+                        <b>Calorie:</b> {{KCal}}
+                        {{#vegetarian}}
+                        <small class="text-muted">Pietanza vegetariana</small>
+                        {{/vegetarian}}
+                    </h4>
+                    <p>{{info}}</p>
+                </div>
+                <div class="col-sm-1">
+                    <h1 id="{{ id }}" class="glyphicon thumb secondo glyphicon-ok" aria-hidden="true"></h1>
+                </div>
+            </div>
+            {{/secondi}}
+            <h3>Contorni</h3>
+            {{#contorni}}
+            <div class="row panel panel-default{{#pdg}} pdg{{/pdg}}">
+                <div class="col-sm-4"><img class="pasto-thumbnail" src="/static/img/{{ id }}.jpg"></div>
+                <div class="col-sm-7">
+                    <h3>
+                        <b><a href="/pasto?id={{id}}">{{nome}}</a></b>
+                        {{#pdg}}
+                        <small class="text-muted">Contorno del giorno</small>
+                        {{/pdg}}
+                    </h3>
+                    <h4>
+                        <b>Calorie:</b> {{KCal}}
+                        {{#vegetarian}}
+                        <small class="text-muted">Pietanza vegetariana</small>
+                        {{/vegetarian}}
+                    </h4>
+                    <p>{{info}}</p>
+                </div>
+                <div class="col-sm-1">
+                    <h1 id="{{ id }}" class="glyphicon thumb contorno glyphicon-ok" aria-hidden="true"></h1>
+                </div>
+            </div>
+            {{/contorni}}
+            <h3>Dessert</h3>
+            {{#dessert}}
+            <div class="row panel panel-default{{#pdg}} pdg{{/pdg}}">
+                <div class="col-sm-4"><img class="pasto-thumbnail" src="/static/img/{{ id }}.jpg"></div>
+                <div class="col-sm-7">
+                    <h3>
+                        <b><a href="/pasto?id={{id}}">{{nome}}</a></b>
+                        {{#pdg}}
+                        <small class="text-muted">Dessert del giorno</small>
+                        {{/pdg}}
+                    </h3>
+                    <h4>
+                        <b>Calorie:</b> {{KCal}}
+                        {{#vegetarian}}
+                        <small class="text-muted">Pietanza vegetariana</small>
+                        {{/vegetarian}}
+                    </h4>
+                    <p>{{info}}</p>
+                </div>
+                <div class="col-sm-1">
+                    <h1 id="{{ id }}" class="glyphicon thumb dessert glyphicon-ok" aria-hidden="true"></h1>
+                </div>
+            </div>
+            {{/dessert}}
+            <div class="pull-right">
+                <label id="conferma-label" for="conferma-ordine" class="control-label"></label>
+                <input id="conferma-ordine" type="button" class="btn btn-success" value="Conferma Menù">
+            </div>
+        </div>
+    </div>
+</div>
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link href="/static/menu.css" rel="stylesheet">
+<script src="/static/menu.js" type="text/javascript"></script>
+</body>
+</html>

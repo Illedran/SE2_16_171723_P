@@ -1,0 +1,27 @@
+.glyphicon-ok {
+    color: green
+}
+
+.glyphicon-remove {
+    color: red
+}
+
+.panel {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+
+}
+
+.panel:hover {
+    border-color: darkgray;
+}
+
+.full {
+    width:100%
+}
+
+.slider {
+    width: 85% !important;
+}

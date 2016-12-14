@@ -1,0 +1,13 @@
+Code review per progetto:
+
+https://github.com/sptanco/SE2_16_174735_P
+
+JS:
+I dati del "database" potrebbero essere contenuti in un file esterno per maggiore chiarezza.
+L'indentazione non è standard, a volte 8 spazi, a volte 4.
+Un gran numero di righe sono completamente vuote.
+Nome della variabili sono un singolo carattere, non è chiaro.
+
+HTML:
+Formattazione potrebbe essere effettuata in modo standard/con più cura, senza numeri eccessivi di tag <br> o simili, si potrebbe utilizzare un framework CSS come bootstrap (non solo in parte).
+Alcuni script javascript sono inseriti direttamente nell'html invece che essere separati.

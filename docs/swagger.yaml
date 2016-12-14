@@ -1,0 +1,91 @@
+# Example YAML to get you started quickly.
+# Be aware that YAML has indentation based scoping.
+# Code completion support is available so start typing for available options.
+swagger: '2.0'
+
+# This is your document metadata
+info:
+  version: "0.0.0"
+  title: APSP Prenotazione Pasti
+
+# Describe your paths here
+paths:
+  # This is a path endpoint. Change it.
+  /index:
+    # This is a HTTP operation
+    get:
+      description: |
+        Ritorna la prima pagina.
+      # This is array of GET operation parameters:
+      responses:
+        # Response code
+        200:
+          description: Successful response
+          # A schema describing your response object.
+          # Use JSON Schema format
+  /pasto:
+    # This is a HTTP operation
+    get:
+      # Describe this verb here. Note: you can use markdown
+      description: |
+        Ritorna la pagina HTML del pasto con id **id**.
+      # This is array of GET operation parameters:
+      parameters:
+        # An example parameter that is in query and is required
+          name: id
+          in: query
+          description: Id del pasto
+          required: true
+          type: number
+          format: integer
+      # Expected responses for this operation:
+      responses:
+        # Response code
+        200:
+          description: Pagina HTML del pasto. Se il pasto non esiste, non verrà visualizzato.
+  /menu:
+    # This is a HTTP operation
+    get:
+      description: |
+        Ritorna la pagina con la scelta e ordinazione del menù.
+      # This is array of GET operation parameters:
+      responses:
+        # Response code
+        200:
+          description: Pagina HTML del menù.
+          # A schema describing your response object.
+          # Use JSON Schema forma
+  /ordina:
+    post:
+      summary: Richiesta di sottomissione del menù.
+      parameters:
+        -
+        name: ids
+        in: JSON
+        description: Array di id dei pasti.
+        required: true
+        type: Array [number]
+        format: integer
+      responses:
+        200:
+          description: Il menù viene salvato nella sessione.
+  /riepilogo:
+    get:
+      description: |
+        Utilizza le informazioni di sessione per stampare un riepilogo del menù.
+      # This is array of GET operation parameters:
+      responses:
+        # Response code
+        200:
+          description: Pagina HTML del riepilogo.
+          # A schema describing your response object.
+          # Use JSON Schema form
+  /valuta:
+    get:
+      description: |
+        Mostra la pagina per la valutazione dei pasti.
+      # This is array of GET operation parameters:
+      responses:
+        # Response code
+        200:
+          description: Pagina HTML della valutazione.

@@ -35,17 +35,20 @@ app.set('port', (process.env.PORT || 1337));
 app.use('/static', express.static('static'));
 
 // Questa view mostra i pasti desiderati
-app.use('/pasto', function (request, response) {
+app.get('/pasto', function (request, response) {
     // Leggi da url query string
     var pasto_id = parseInt(request.query.id);
     var pasto = isNaN(pasto_id) ? undefined : model.get_pasto(pasto_id);
+    // console.log(pasto);
     if (pasto === undefined) {
-        pasto = {error: "Pasto non trovato!"}
+        pasto = {error: "Pasto non trovato!", isfound: false}
+    } else {
+        pasto.isfound = true;
     }
     response.render('pasto', pasto);
 });
 
-app.use('/menu', function (request, response) {
+app.get('/menu', function (request, response) {
     response.render('menu', model.get_pasti());
 });
 
@@ -62,11 +65,11 @@ app.post('/conferma-ordine', function (request, response) {
     response.redirect('/riepilogo');
 });
 
-app.use('/riepilogo', function (request, response) {
+app.get('/riepilogo', function (request, response) {
     response.render('riepilogo', {"pasti": request.session.data, "totale": request.session.tot});
 });
 
-app.use('/valuta', function (request, response) {
+app.get('/valuta', function (request, response) {
     response.render('valuta');
 });
 

@@ -5,6 +5,7 @@ var exports = module.exports = {};
 var pasti;
 
 // Utilizzo JSMin per rimuovere i commenti nel json
+// Data e immagini non dovrebbero stare nella repository, ma carico tutto per riproducibilità
 var jsmin = require('jsmin').jsmin;
 
 var fs = require('fs');

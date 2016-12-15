@@ -35,17 +35,24 @@ app.set('port', (process.env.PORT || 1337));
 app.use('/static', express.static('static'));
 
 // Questa view mostra i pasti desiderati
-app.get('/pasto', function (request, response) {
-    // Leggi da url query string
-    var pasto_id = parseInt(request.query.id);
-    var pasto = isNaN(pasto_id) ? undefined : model.get_pasto(pasto_id);
-    // console.log(pasto);
+app.get('/pasto/:id(\\d+)/', function (request, response) {
+    var pasto = model.get_pasto(parseInt(request.params.id));
     if (pasto === undefined) {
-        pasto = {error: "Pasto non trovato!", isfound: false}
+        response.sendStatus(404);
     } else {
-        pasto.isfound = true;
+        response.render('pasto', pasto);
     }
-    response.render('pasto', pasto);
+});
+
+// Ritorna il JSON del pasto generato
+app.get('/getPasto/:id(\\d+)/', function (request, response) {
+    var pasto = model.get_pasto(parseInt(request.params.id));
+    if (pasto === undefined) {
+        response.sendStatus(404);
+    } else {
+        response.writeHead(200, {"Content-Type": "application/json; charset=utf-8"});
+        response.end(JSON.stringify(pasto));
+    }
 });
 
 app.get('/menu', function (request, response) {

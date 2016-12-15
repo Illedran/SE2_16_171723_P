@@ -1,53 +1,50 @@
-# Example YAML to get you started quickly.
-# Be aware that YAML has indentation based scoping.
-# Code completion support is available so start typing for available options.
 swagger: '2.0'
 
-# This is your document metadata
 info:
   version: "0.0.0"
   title: APSP Prenotazione Pasti
 
-# Describe your paths here
 paths:
-  # This is a path endpoint. Change it.
   /index:
-    # This is a HTTP operation
     get:
-      description: |
-        Ritorna la prima pagina.
-      # This is array of GET operation parameters:
+      description: Ritorna la prima pagina.
       responses:
-        # Response code
         200:
           description: Successful response
-          # A schema describing your response object.
-          # Use JSON Schema format
-  /pasto:
-    # This is a HTTP operation
+  "/pasto/{id}/":
     get:
-      # Describe this verb here. Note: you can use markdown
-      description: |
-        Ritorna la pagina HTML del pasto con id **id**.
-      # This is array of GET operation parameters:
-      parameters:
-        # An example parameter that is in query and is required
-          name: id
-          in: query
-          description: Id del pasto
-          required: true
-          type: number
-          format: integer
-      # Expected responses for this operation:
+      description: Ritorna la pagina HTML del pasto con id **id**.
       responses:
-        # Response code
         200:
           description: Pagina HTML del pasto. Se il pasto non esiste, non verrà visualizzato.
+      parameters:
+        - name: id
+          in: query
+          description: ID del pasto ricercato.
+          required: true
+          type: integer
+          format: int32
+  "/getPasto/{id}/":
+    get:
+      description: Ritorna il JSON del pasto con id **id**.
+      responses:
+        200:
+          description: JSON del pasto.
+          schema:
+            $ref: '#/definitions/Pasto'
+        404:
+          description: Se il pasto non esiste.
+      parameters:
+        - name: id
+          in: query
+          description: ID del pasto ricercato.
+          required: true
+          type: integer
+          format: int32
   /menu:
     # This is a HTTP operation
     get:
-      description: |
-        Ritorna la pagina con la scelta e ordinazione del menù.
+      description: Ritorna la pagina con la scelta e ordinazione del menù.
       # This is array of GET operation parameters:
       responses:
         # Response code
@@ -59,13 +56,12 @@ paths:
     post:
       summary: Richiesta di sottomissione del menù.
       parameters:
-        -
-        name: ids
-        in: JSON
-        description: Array di id dei pasti.
-        required: true
-        type: Array [number]
-        format: integer
+        - name: ids
+          in: JSON
+          description: Array di id dei pasti.
+          required: true
+          type: array
+          format: integer
       responses:
         200:
           description: Il menù viene salvato nella sessione.
@@ -89,3 +85,26 @@ paths:
         # Response code
         200:
           description: Pagina HTML della valutazione.
+
+definitions:
+  Pasto:
+    required:
+      - id
+      - nome
+      - KCal
+      - vegetarian
+      - info
+    properties:
+      id:
+        type: integer
+        format: int64
+      nome:
+        type: string
+      KCal:
+        type: number
+      vegetarian:
+        type: boolean
+      info:
+        type: string
+      pdg:
+        type: boolean
